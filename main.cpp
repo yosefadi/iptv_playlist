@@ -90,4 +90,8 @@ int main(int argc, char** argv) {
    update_url(url7,67);
    update_url(url8,187);
    return 0;
+   system("git add .");
+   system("git commit -m \"auto update\"");
+   system("git push");
+   
 }
