@@ -173,6 +173,5 @@ int main(int argc, char** argv) {
    git_add();
    git_commit();
    git_push();
-   system("pause");
    return 0;
 }

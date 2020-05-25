@@ -1,0 +1,10 @@
+[master 902d4b5] auto update service
+
+ 5 files changed, 121 insertions(+), 40 deletions(-)
+
+ rewrite Makefile.win (69%)
+
+ rewrite autoupdate-iptv.exe (75%)
+
+ create mode 100644 gitaddlog.txt
+

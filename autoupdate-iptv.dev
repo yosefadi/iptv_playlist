@@ -9,7 +9,7 @@ Libs=
 PrivateResource=
 ResourceIncludes=
 MakeIncludes=
-Compiler=
+Compiler=_@@_
 CppCompiler=
 Linker=
 IsCpp=1
@@ -28,7 +28,7 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=000000b0g0000000000000000
+CompilerSettings=11011jbag0000000000001000
 UnitCount=1
 
 [VersionInfo]
