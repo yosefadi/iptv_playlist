@@ -1,17 +1,17 @@
 # Project: autoupdate-iptv
 # Makefile created by Dev-C++ 5.11
 
-CPP      = 
-CC       = 
-WINDRES  = 
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
 OBJ      = main.o
 LINKOBJ  = main.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/lib" -L"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/x86_64-w64-mingw32/lib"
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/include" -I"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/x86_64-w64-mingw32/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/include" -I"C:/Program Files (x86)/Dev-Cpp/winlibs-x86_64-posix-seh-gcc-10.1.0-llvm-10.0.0-mingw-w64-7.0.0-r3/x86_64-w64-mingw32/include"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -m64 -s
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = autoupdate-iptv.exe
-CXXFLAGS = $(CXXINCS) -std=gnu++11 -mtune:skylake -O3
-CFLAGS   = $(INCS) -std=gnu++11 -mtune:skylake -O3
+CXXFLAGS = $(CXXINCS) -ansi -fno-asm -march=native -mtune=native -mavx -O3 -m64 -std=gnu++11
+CFLAGS   = $(INCS) -ansi -fno-asm -march=native -mtune=native -mavx -O3 -m64 -std=gnu++11
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom

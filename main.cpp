@@ -8,6 +8,87 @@ using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+int git_add(){
+	char   psBuffer[1024];
+	FILE   *pPipe;
+	
+	ofstream gitlogfile("gitaddlog.txt");
+	if( (pPipe = _popen("git add .", "rb" )) == NULL )
+      exit( 1 );
+	
+   while(fgets(psBuffer, 1024, pPipe))
+   {
+      	puts(psBuffer);
+      	gitlogfile << psBuffer << endl;
+    } 
+    gitlogfile.close();
+    
+    if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+   
+   return 0;
+}
+
+int git_commit(){
+	char   psBuffer[1024];
+	FILE   *pPipe;
+	
+	ofstream gitlogfile("gitcommitlog.txt");
+	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
+      exit( 1 );
+	
+   while(fgets(psBuffer, 1024, pPipe))
+   {
+      	puts(psBuffer);
+      	gitlogfile << psBuffer << endl;
+    } 
+    gitlogfile.close();
+    
+    if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+   
+   return 0;
+}
+
+int git_push(){
+	char   psBuffer[1024];
+	FILE   *pPipe;
+	
+	ofstream gitlogfile("gitpushlog.txt");
+	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
+      exit( 1 );
+	
+   while(fgets(psBuffer, 1024, pPipe))
+   {
+      	puts(psBuffer);
+      	gitlogfile << psBuffer << endl;
+    } 
+    gitlogfile.close();
+    
+    if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+   
+   return 0;
+}
+
 int update_url(string neturl, int linenum) {
 	char   psBuffer[32768];
 	FILE   *pPipe;
@@ -89,9 +170,9 @@ int main(int argc, char** argv) {
    update_url(url6,91);
    update_url(url7,67);
    update_url(url8,187);
+   git_add();
+   git_commit();
+   git_push();
+   system("pause");
    return 0;
-   system("git add .");
-   system("git commit -m \"auto update\"");
-   system("git push");
-   
 }
