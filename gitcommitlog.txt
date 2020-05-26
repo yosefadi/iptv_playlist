@@ -1,8 +1,6 @@
-[master 42c8098] auto update service
+[master 5f0806f] auto update service
 
- 7 files changed, 22 insertions(+), 13 deletions(-)
+ 5 files changed, 20 insertions(+), 14 deletions(-)
 
- create mode 100644 gitcommitlog.txt
-
- create mode 100644 gitpushlog.txt
+ create mode 100644 logo/euronews.jpg
 
