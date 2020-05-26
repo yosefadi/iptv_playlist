@@ -10,7 +10,7 @@ PrivateResource=
 ResourceIncludes=
 MakeIncludes=
 Compiler=_@@_
-CppCompiler=
+CppCompiler=-march=skylake -mtune=skylake -msse -msse3 _@@_
 Linker=
 IsCpp=1
 Icon=
@@ -27,8 +27,8 @@ CommandLine=
 Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=11011jbag0000000000001000
+CompilerSet=6
+CompilerSettings=11000jbag0100001000001000
 UnitCount=1
 
 [VersionInfo]
