@@ -13,9 +13,14 @@ int git_pull(){
 	FILE   *pPipe;
 	
 	//ofstream gitlogfile("gitaddlog.txt");
+#ifdef WIN32
 	if( (pPipe = _popen("git pull origin", "rb" )) == NULL )
       exit( 1 );
-	
+#elif __linux__
+	if( (pPipe = popen("git pull origin", "rb" )) == NULL )
+      exit( 1 );
+#endif
+
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
@@ -25,7 +30,11 @@ int git_pull(){
     
     if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
@@ -40,9 +49,14 @@ int git_add(){
 	FILE   *pPipe;
 	
 	//ofstream gitlogfile("gitaddlog.txt");
+#ifdef WIN32
 	if( (pPipe = _popen("git add .", "rb" )) == NULL )
       exit( 1 );
-	
+#elif __linux__
+	if( (pPipe = popen("git add .", "rb" )) == NULL )
+      exit( 1 );
+#endif
+
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
@@ -52,7 +66,11 @@ int git_add(){
     
     if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
@@ -67,8 +85,13 @@ int git_commit(){
 	FILE   *pPipe;
 	
 	//ofstream gitlogfile("gitcommitlog.txt");
+#ifdef WIN32
 	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
       exit( 1 );
+#elif __linux__
+	if( (pPipe = popen("git commit -m \"auto update service\"", "rb" )) == NULL )
+      exit( 1 );
+#endif
 	
    while(fgets(psBuffer, 1024, pPipe))
    {
@@ -79,7 +102,11 @@ int git_commit(){
     
     if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
@@ -94,9 +121,14 @@ int git_push(){
 	FILE   *pPipe;
 	
 	//ofstream gitlogfile("gitpushlog.txt");
+#ifdef WIN32
 	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
       exit( 1 );
-	
+#elif __linux__
+	if( (pPipe = popen("git push origin", "rb" )) == NULL )
+      exit( 1 );
+#endif
+
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
@@ -106,7 +138,11 @@ int git_push(){
     
     if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
@@ -136,9 +172,14 @@ int update_url(string neturl, int linenum) {
 	
    	string cmdnet = "youtube-dl -f 94 -g ";
 	cmdnet += neturl;
+#ifdef WIN32
    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
       exit( 1 );
-	
+#elif __linux__
+   if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
+      exit( 1 );
+#endif
+
    while(fgets(psBuffer, 32768, pPipe))
    {
       	puts(psBuffer);
@@ -170,7 +211,11 @@ int update_url(string neturl, int linenum) {
    
    if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
@@ -200,8 +245,13 @@ int update_dm(string dmurl, int linenum) {
 	
    	string cmdnet = "youtube-dl -f hls-480-0 -g ";
 	cmdnet += dmurl;
+#ifdef WIN32
    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
       exit( 1 );
+#elif __linux__
+   if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
+      exit( 1 );
+#endif	
 	
    while(fgets(psBuffer, 32768, pPipe))
    {
@@ -234,7 +284,11 @@ int update_dm(string dmurl, int linenum) {
    
    if (feof( pPipe))
    {
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#ifdef WIN32
+    	printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+#elif __linux__
+		printf( "\nProcess returned %d\n", pclose( pPipe ) );
+#endif
    }
    else
    {
