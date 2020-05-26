@@ -1,10 +1,8 @@
-[master 902d4b5] auto update service
+[master 42c8098] auto update service
 
- 5 files changed, 121 insertions(+), 40 deletions(-)
+ 7 files changed, 22 insertions(+), 13 deletions(-)
 
- rewrite Makefile.win (69%)
+ create mode 100644 gitcommitlog.txt
 
- rewrite autoupdate-iptv.exe (75%)
-
- create mode 100644 gitaddlog.txt
+ create mode 100644 gitpushlog.txt
 
