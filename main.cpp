@@ -8,20 +8,47 @@ using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+int git_pull(){
+	char   psBuffer[1024];
+	FILE   *pPipe;
+	
+	//ofstream gitlogfile("gitaddlog.txt");
+	if( (pPipe = _popen("git pull origin", "rb" )) == NULL )
+      exit( 1 );
+	
+   while(fgets(psBuffer, 1024, pPipe))
+   {
+      	puts(psBuffer);
+      	//gitlogfile << psBuffer << endl;
+    } 
+    //gitlogfile.close();
+    
+    if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+   
+   return 0;
+}
+
 int git_add(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
 	
-	ofstream gitlogfile("gitaddlog.txt");
+	//ofstream gitlogfile("gitaddlog.txt");
 	if( (pPipe = _popen("git add .", "rb" )) == NULL )
       exit( 1 );
 	
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
-      	gitlogfile << psBuffer << endl;
+      	//gitlogfile << psBuffer << endl;
     } 
-    gitlogfile.close();
+    //gitlogfile.close();
     
     if (feof( pPipe))
    {
@@ -39,16 +66,16 @@ int git_commit(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
 	
-	ofstream gitlogfile("gitcommitlog.txt");
+	//ofstream gitlogfile("gitcommitlog.txt");
 	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
       exit( 1 );
 	
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
-      	gitlogfile << psBuffer << endl;
+      //	gitlogfile << psBuffer << endl;
     } 
-    gitlogfile.close();
+    //gitlogfile.close();
     
     if (feof( pPipe))
    {
@@ -66,16 +93,16 @@ int git_push(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
 	
-	ofstream gitlogfile("gitpushlog.txt");
+	//ofstream gitlogfile("gitpushlog.txt");
 	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
       exit( 1 );
 	
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
-      	gitlogfile << psBuffer << endl;
+      //	gitlogfile << psBuffer << endl;
     } 
-    gitlogfile.close();
+    //gitlogfile.close();
     
     if (feof( pPipe))
    {
@@ -115,14 +142,14 @@ int update_url(string neturl, int linenum) {
    while(fgets(psBuffer, 32768, pPipe))
    {
       	puts(psBuffer);
-      	cout << "\n Output is:\n";
+      	//cout << "\n Output is:\n";
       	string t(psBuffer);
       	if (!t.empty() && t[t.length()-1] == '\n') {
     		t.erase(t.length()-1);
 		}
       	t += "|Referer=";
       	t += neturl;
-      	cout << t << "\n";
+      	//cout << t << "\n";
 		
 		tempfile << t << endl;
 		getline(infile,str);
@@ -179,14 +206,14 @@ int update_dm(string dmurl, int linenum) {
    while(fgets(psBuffer, 32768, pPipe))
    {
       	puts(psBuffer);
-      	cout << "\n Output is:\n";
+      	//cout << "\n Output is:\n";
       	string t(psBuffer);
       	if (!t.empty() && t[t.length()-1] == '\n') {
     		t.erase(t.length()-1);
 		}
       	t += "|Referer=";
       	t += dmurl;
-      	cout << t << "\n";
+      	//cout << t << "\n";
 		
 		tempfile << t << endl;
 		getline(infile,str);

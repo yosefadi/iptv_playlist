@@ -1,8 +1,0 @@
-[master 9002c18] auto update service
-
- 5 files changed, 57 insertions(+), 46 deletions(-)
-
- rewrite Makefile.win (65%)
-
- rewrite autoupdate-iptv.exe (98%)
-
