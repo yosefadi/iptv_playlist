@@ -1,6 +1,4 @@
-[master edc7c95] auto update service
+[master d3c85b7] auto update service
 
- 4 files changed, 14 insertions(+), 9 deletions(-)
-
- create mode 100644 logo/cctv4.png
+ 4 files changed, 82 insertions(+), 13 deletions(-)
 
