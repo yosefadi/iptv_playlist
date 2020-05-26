@@ -163,6 +163,7 @@ int main(int argc, char** argv) {
    string url7 = "https://www.youtube.com/channel/UCzVtD2LBJ29L6Tz4YzLLAcg/live"; //gprtv
    string url8 = "https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live"; //skynews
    string url9 = "https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live"; //euronews
+   string url10 = "https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live"; //cctv4
    update_url(url1,151);
    update_url(url2,103);
    update_url(url3,100);
@@ -172,6 +173,7 @@ int main(int argc, char** argv) {
    update_url(url7,67);
    update_url(url8,187);
    update_url(url9,214);
+   update_url(url10,217);
    git_add();
    git_commit();
    git_push();
