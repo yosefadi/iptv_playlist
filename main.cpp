@@ -153,6 +153,70 @@ int update_url(string neturl, int linenum) {
    return 0;
 }
 
+int update_dm(string dmurl, int linenum) {
+	char   psBuffer[32768];
+	FILE   *pPipe;
+	string str;
+
+	ifstream infile("iptv.m3u");
+	ofstream tempfile("temp.txt");
+	if (!infile) {
+		printf("Error! File not found."); 
+		return 1;
+	}
+
+	for(unsigned int i=0; i < linenum - 1; i++) {
+		getline(infile,str);
+		tempfile << str << endl;
+		//cout << str << endl;
+	}
+	
+   	string cmdnet = "youtube-dl -f hls-480-0 -g ";
+	cmdnet += dmurl;
+   if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
+      exit( 1 );
+	
+   while(fgets(psBuffer, 32768, pPipe))
+   {
+      	puts(psBuffer);
+      	cout << "\n Output is:\n";
+      	string t(psBuffer);
+      	if (!t.empty() && t[t.length()-1] == '\n') {
+    		t.erase(t.length()-1);
+		}
+      	t += "|Referer=";
+      	t += dmurl;
+      	cout << t << "\n";
+		
+		tempfile << t << endl;
+		getline(infile,str);
+   } 
+   
+   while(getline(infile,str)) {
+		tempfile << str << endl;
+		//cout << str << endl;
+   }
+
+	// close file
+	infile.close();
+	tempfile.close();
+	
+	remove("iptv.m3u");
+   rename("temp.txt", "iptv.m3u");
+   remove("temp.txt");
+   
+   if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+   
+   return 0;
+}
+
 int main(int argc, char** argv) {
    string url1 = "https://www.youtube.com/channel/UCcZg5r9hBqK_VPUT2I7eYVw/live"; //bernama
    string url2 = "https://www.youtube.com/channel/UCQo_L_h_01NjLYiNHUnjEJw/live"; //reformed21
@@ -164,6 +228,7 @@ int main(int argc, char** argv) {
    string url8 = "https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live"; //skynews
    string url9 = "https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live"; //euronews
    string url10 = "https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live"; //cctv4
+   string url11 = "https://www.dailymotion.com/embed/video/kxm1wihUkjNiINrAqlg"; //ntv7
    update_url(url1,151);
    update_url(url2,103);
    update_url(url3,100);
@@ -174,6 +239,7 @@ int main(int argc, char** argv) {
    update_url(url8,187);
    update_url(url9,214);
    update_url(url10,217);
+   update_dm(url11,220);
    git_add();
    git_commit();
    git_push();

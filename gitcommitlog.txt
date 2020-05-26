@@ -1,6 +1,6 @@
-[master 5f0806f] auto update service
+[master edc7c95] auto update service
 
- 5 files changed, 20 insertions(+), 14 deletions(-)
+ 4 files changed, 14 insertions(+), 9 deletions(-)
 
- create mode 100644 logo/euronews.jpg
+ create mode 100644 logo/cctv4.png
 
