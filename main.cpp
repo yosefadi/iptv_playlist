@@ -101,7 +101,7 @@ int update_url(string neturl, int linenum) {
 		return 1;
 	}
 
-	for(unsigned int i=0; i < linenum - 1; i++) {
+	for(int i=0; i < linenum - 1; i++) {
 		getline(infile,str);
 		tempfile << str << endl;
 		//cout << str << endl;
@@ -165,7 +165,7 @@ int update_dm(string dmurl, int linenum) {
 		return 1;
 	}
 
-	for(unsigned int i=0; i < linenum - 1; i++) {
+	for(int i=0; i < linenum - 1; i++) {
 		getline(infile,str);
 		tempfile << str << endl;
 		//cout << str << endl;
@@ -233,6 +233,7 @@ int main(int argc, char** argv) {
    string url13 = "https://www.dailymotion.com/embed/video/k1FijVynGNsZ2ZrAGJ0"; //tv9
    string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
    string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
+   string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
    update_url(url1,151);
    update_url(url2,103);
    update_url(url3,100);
@@ -248,6 +249,7 @@ int main(int argc, char** argv) {
    update_dm(url13,226);
    update_url(url14,229);
    update_url(url15,232);
+   update_url(url16,244);
    git_add();
    git_commit();
    git_push();
