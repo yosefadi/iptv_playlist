@@ -21,7 +21,7 @@ LIBKOBJ				= main.o
 LIBS				= -L $(CROSS_COMPILE_DIR)/lib -static-libgcc
 INCS				= -I $(CROSS_COMPILE_DIR)/include
 CXXINCS				= -I $(CROSS_COMPILE_DIR)/include
-CFLAGS				= $(INCS) -ansi -O3 --Wall -Wfatal-errors -Wundef  \
+CFLAGS				= $(INCS) -ansi -O3 -Wall -Wfatal-errors -Wundef  \
 					  -Wstrict-prototypes -Wno-trigraphs \
 					  -fno-strict-aliasing -fno-asm -fno-delete-null-pointer-checks \
 					  -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53
