@@ -14,10 +14,10 @@ int git_pull(){
 	//ofstream gitlogfile("gitaddlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git pull origin", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
 	if( (pPipe = popen("git pull origin", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif
 
    while(fgets(psBuffer, 1024, pPipe))
@@ -50,10 +50,10 @@ int git_add(){
 	//ofstream gitlogfile("gitaddlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git add .", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
 	if( (pPipe = popen("git add .", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif
 
    while(fgets(psBuffer, 1024, pPipe))
@@ -86,10 +86,10 @@ int git_commit(){
 	//ofstream gitlogfile("gitcommitlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
 	if( (pPipe = popen("git commit -m \"auto update service\"", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif
 	
    while(fgets(psBuffer, 1024, pPipe))
@@ -122,10 +122,10 @@ int git_push(){
 	//ofstream gitlogfile("gitpushlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
 	if( (pPipe = popen("git push origin", "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif
 
    while(fgets(psBuffer, 1024, pPipe))
@@ -173,10 +173,10 @@ int update_url(string neturl, int linenum) {
 	cmdnet += neturl;
 #ifdef WIN32
    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
    if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif
 
    while(fgets(psBuffer, 32768, pPipe))
@@ -246,10 +246,10 @@ int update_dm(string dmurl, int linenum) {
 	cmdnet += dmurl;
 #ifdef WIN32
    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #elif __linux__
    if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
-      exit( 1 );
+      return( 1 );
 #endif	
 	
    while(fgets(psBuffer, 32768, pPipe))
