@@ -314,22 +314,22 @@ int main(int argc, char** argv) {
    string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
    string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
    string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
-   update_url(url1,151);
-   update_url(url2,103);
-   update_url(url3,100);
-   update_url(url4,97);
-   update_url(url5,94);
-   update_url(url6,91);
-   update_url(url7,67);
-   update_url(url8,187);
-   update_url(url9,214);
-   update_url(url10,217);
-   update_dm(url11,220);
-   update_dm(url12,223);
-   update_dm(url13,226);
-   update_url(url14,229);
-   update_url(url15,232);
-   update_url(url16,244);
+   update_url(url1,160);
+   update_url(url2,112);
+   update_url(url3,109);
+   update_url(url4,106);
+   update_url(url5,103);
+   //update_url(url6,91);
+   update_url(url7,76);
+   update_url(url8,196);
+   update_url(url9,223);
+   update_url(url10,226);
+   update_dm(url11,229);
+   update_dm(url12,232);
+   update_dm(url13,235);
+   update_url(url14,238);
+   update_url(url15,241);
+   update_url(url16,253);
    git_add();
    git_commit();
    git_push();
