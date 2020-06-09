@@ -43,22 +43,22 @@ https://video.detik.com/trans7/smil:trans7.smil/chunklist_w834399503_b384000_sle
 https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/chunklist_w1267137537_b384000_sleng.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/kk/k_drama_id.png" group-title="INDONESIA",K Drama
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/137_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/137_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/dd/drakor-plus-id.png" group-title="INDONESIA",Drakor Plus
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/132_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/132_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/ss/sinema-indonesia-x-id.png" group-title="INDONESIA",Sinema Indonesia X
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/114_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/114_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/ff/ftv-id.png" group-title="INDONESIA",FTV
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/134_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/134_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/ss/sinema-indonesia-id.png" group-title="INDONESIA",Sinema Indonesia
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/124_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/124_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="http://www.lyngsat-stream.com/logo/tv/mm/m-cine-channel-id.png" group-title="INDONESIA",M Cine Channel
-https://stream.suryaiptv.net/eyeplus/freeview/3UpsKEPXf2nciSu5qXd2/135_.m3u8
+https://stream.suryaiptv.net/eyeplus/freeview/kqCE0sC03SgvjJ4zZY9F/135_.m3u8
 
 #EXTINF:-1 tvg-group="ID" tvg-logo="https://pngimage.net/wp-content/uploads/2018/06/logo-metro-tv-png-2.png" group-title="INDONESIA",METRO TV HD
 http://edge.metrotvnews.com:1935/live-edge/smil:metro.smil/playlist.m3u8
@@ -260,3 +260,12 @@ https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/playlist.m3u8
 
 #EXTINF:-1 tvg-group="Entertainment" tvg-logo="https://www.cmctv.com/camuslogo.gif" group-title="Entertainment",CMC-TV
 https://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMC-TV/chunklist.m3u8
+
+#EXTINF:-1 group-title="Brunei" tvg-logo="http://www.rtb.gov.bn/SiteAssets/SitePages/TV%20Programme%20Division/LOGO%20RTB%20SUKMAINDERA.png",RTB Sukmaindera
+https://rtb-channel.glue.live/smil:rtb1/chunklist.m3u8
+
+#EXTINF:-1 group-title="Kids" tvg-logo="https://images.squarespace-cdn.com/content/5b45347bf8370a03e64f284d/1531263808845-27U5TCTZ7RKPXMDG8CKM/KAB_LOGO_02.png",Kabillion
+https://dai2.xumo.com/xumocdn/p=redbox&deviceid=&is_lat=&subp=RedboxdesktopWebWindows/amagi_hls_data_xumo1212A-redboxkabillion/CDN/1280x720_5000000/index.m3u8
+
+#EXTINF:-1 tvg-group="Religious" tvg-logo="https://raw.githubusercontent.com/yosefadi/iptv_playlist/master/logo/hillsong.png" group-title="Religious",Hillsong Channel
+https://acaooyalahd2-lh.akamaihd.net/i/TBN02_delivery@186240/master.m3u8
