@@ -298,22 +298,22 @@ int update_dm(string dmurl, int linenum) {
 }
 
 int main(int argc, char** argv) {
-   string url1 = "https://www.youtube.com/channel/UCcZg5r9hBqK_VPUT2I7eYVw/live"; //bernama
-   string url2 = "https://www.youtube.com/channel/UCQo_L_h_01NjLYiNHUnjEJw/live"; //reformed21
-   string url3 = "https://www.youtube.com/channel/UCTR1wO3hnYzBs0BJIQAyZKw/live"; //hope channel
-   string url4 = "https://www.youtube.com/channel/UCER4rvDnRBPr_ncYW4UCZjg/live"; //tvone
-   string url5 = "https://www.youtube.com/channel/UC5BMIWZe9isJXLZZWPWvBlg/live"; //kompastv
-   string url6 = "https://www.youtube.com/channel/UC1-ATnDVEwKT6-0aEeJ2ibA/live"; //net
-   string url7 = "https://www.youtube.com/channel/UCzVtD2LBJ29L6Tz4YzLLAcg/live"; //gprtv
-   string url8 = "https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live"; //skynews
-   string url9 = "https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live"; //euronews
-   string url10 = "https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live"; //cctv4
-   string url11 = "https://www.dailymotion.com/embed/video/kxm1wihUkjNiINrAqlg"; //ntv7
-   string url12 = "https://www.dailymotion.com/embed/video/kdFzSYy1bHxrForBrar"; //8tv
-   string url13 = "https://www.dailymotion.com/embed/video/k1FijVynGNsZ2ZrAGJ0"; //tv9
-   string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
-   string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
-   string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
+   const string url1 = "https://www.youtube.com/channel/UCcZg5r9hBqK_VPUT2I7eYVw/live"; //bernama
+   const string url2 = "https://www.youtube.com/channel/UCQo_L_h_01NjLYiNHUnjEJw/live"; //reformed21
+   const string url3 = "https://www.youtube.com/channel/UCTR1wO3hnYzBs0BJIQAyZKw/live"; //hope channel
+   const string url4 = "https://www.youtube.com/channel/UCER4rvDnRBPr_ncYW4UCZjg/live"; //tvone
+   const string url5 = "https://www.youtube.com/channel/UC5BMIWZe9isJXLZZWPWvBlg/live"; //kompastv
+   const string url6 = "https://www.youtube.com/channel/UC1-ATnDVEwKT6-0aEeJ2ibA/live"; //net
+   const string url7 = "https://www.youtube.com/channel/UCzVtD2LBJ29L6Tz4YzLLAcg/live"; //gprtv
+   const string url8 = "https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live"; //skynews
+   const string url9 = "https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live"; //euronews
+   const string url10 = "https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live"; //cctv4
+   const string url11 = "https://www.dailymotion.com/embed/video/kxm1wihUkjNiINrAqlg"; //ntv7
+   const string url12 = "https://www.dailymotion.com/embed/video/kdFzSYy1bHxrForBrar"; //8tv
+   const string url13 = "https://www.dailymotion.com/embed/video/k1FijVynGNsZ2ZrAGJ0"; //tv9
+   const string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
+   const string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
+   const string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
    update_url(url1,160);
    update_url(url2,112);
    update_url(url3,109);
