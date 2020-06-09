@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1591697286 source:f:\users\documents\autoupdateiptv\autoupdateiptv\main.cpp
+	<fstream>
+	<iostream>
+	<sstream>
+	<string>
+	<cstdio>
+
+1591697286 source:f:\users\documents\github\iptv_playlist\main.cpp
+	<fstream>
+	<iostream>
+	<sstream>
+	<string>
+	<cstdio>
+

@@ -10,7 +10,7 @@ using namespace std;
 int git_pull(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
-	
+
 	//ofstream gitlogfile("gitaddlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git pull origin", "rb" )) == NULL )
@@ -24,9 +24,9 @@ int git_pull(){
    {
       	puts(psBuffer);
       	//gitlogfile << psBuffer << endl;
-    } 
+    }
     //gitlogfile.close();
-    
+
     if (feof( pPipe))
    {
 #ifdef WIN32
@@ -39,14 +39,14 @@ int git_pull(){
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
 int git_add(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
-	
+
 	//ofstream gitlogfile("gitaddlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git add .", "rb" )) == NULL )
@@ -60,9 +60,9 @@ int git_add(){
    {
       	puts(psBuffer);
       	//gitlogfile << psBuffer << endl;
-    } 
+    }
     //gitlogfile.close();
-    
+
     if (feof( pPipe))
    {
 #ifdef WIN32
@@ -75,14 +75,14 @@ int git_add(){
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
 int git_commit(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
-	
+
 	//ofstream gitlogfile("gitcommitlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
@@ -91,14 +91,14 @@ int git_commit(){
 	if( (pPipe = popen("git commit -m \"auto update service\"", "rb" )) == NULL )
       return( 1 );
 #endif
-	
+
    while(fgets(psBuffer, 1024, pPipe))
    {
       	puts(psBuffer);
       //	gitlogfile << psBuffer << endl;
-    } 
+    }
     //gitlogfile.close();
-    
+
     if (feof( pPipe))
    {
 #ifdef WIN32
@@ -111,14 +111,14 @@ int git_commit(){
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
 int git_push(){
 	char   psBuffer[1024];
 	FILE   *pPipe;
-	
+
 	//ofstream gitlogfile("gitpushlog.txt");
 #ifdef WIN32
 	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
@@ -132,9 +132,9 @@ int git_push(){
    {
       	puts(psBuffer);
       //	gitlogfile << psBuffer << endl;
-    } 
+    }
     //gitlogfile.close();
-    
+
     if (feof( pPipe))
    {
 #ifdef WIN32
@@ -147,7 +147,7 @@ int git_push(){
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
@@ -159,7 +159,7 @@ int update_url(string neturl, int linenum) {
 	ifstream infile("iptv.m3u");
 	ofstream tempfile("temp.txt");
 	if (!infile) {
-		printf("Error! File not found."); 
+		printf("Error! File not found.");
 		return 1;
 	}
 
@@ -168,7 +168,7 @@ int update_url(string neturl, int linenum) {
 		tempfile << str << endl;
 		//cout << str << endl;
 	}
-	
+
    	string cmdnet = "youtube-dl -f 94 -g ";
 	cmdnet += neturl;
 #ifdef WIN32
@@ -190,11 +190,11 @@ int update_url(string neturl, int linenum) {
       	t += "|Referer=";
       	t += neturl;
       	//cout << t << "\n";
-		
+
 		tempfile << t << endl;
 		getline(infile,str);
-   } 
-   
+   }
+
    while(getline(infile,str)) {
 		tempfile << str << endl;
 		//cout << str << endl;
@@ -203,11 +203,11 @@ int update_url(string neturl, int linenum) {
 	// close file
 	infile.close();
 	tempfile.close();
-	
+
 	remove("iptv.m3u");
    rename("temp.txt", "iptv.m3u");
    remove("temp.txt");
-   
+
    if (feof( pPipe))
    {
 #ifdef WIN32
@@ -220,7 +220,7 @@ int update_url(string neturl, int linenum) {
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
@@ -232,7 +232,7 @@ int update_dm(string dmurl, int linenum) {
 	ifstream infile("iptv.m3u");
 	ofstream tempfile("temp.txt");
 	if (!infile) {
-		printf("Error! File not found."); 
+		printf("Error! File not found.");
 		return 1;
 	}
 
@@ -241,7 +241,7 @@ int update_dm(string dmurl, int linenum) {
 		tempfile << str << endl;
 		//cout << str << endl;
 	}
-	
+
    	string cmdnet = "youtube-dl -f hls-480-0 -g ";
 	cmdnet += dmurl;
 #ifdef WIN32
@@ -250,8 +250,8 @@ int update_dm(string dmurl, int linenum) {
 #elif __linux__
    if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
       return( 1 );
-#endif	
-	
+#endif
+
    while(fgets(psBuffer, 32768, pPipe))
    {
       	puts(psBuffer);
@@ -263,11 +263,11 @@ int update_dm(string dmurl, int linenum) {
       	t += "|Referer=";
       	t += dmurl;
       	//cout << t << "\n";
-		
+
 		tempfile << t << endl;
 		getline(infile,str);
-   } 
-   
+   }
+
    while(getline(infile,str)) {
 		tempfile << str << endl;
 		//cout << str << endl;
@@ -276,11 +276,11 @@ int update_dm(string dmurl, int linenum) {
 	// close file
 	infile.close();
 	tempfile.close();
-	
+
 	remove("iptv.m3u");
    rename("temp.txt", "iptv.m3u");
    remove("temp.txt");
-   
+
    if (feof( pPipe))
    {
 #ifdef WIN32
@@ -293,7 +293,7 @@ int update_dm(string dmurl, int linenum) {
    {
      printf( "Error: Failed to read the pipe to the end.\n");
    }
-   
+
    return 0;
 }
 
