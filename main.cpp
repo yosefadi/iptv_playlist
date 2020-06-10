@@ -16,7 +16,7 @@ int git_pull(){
 	if( (pPipe = _popen("git pull origin", "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-	if( (pPipe = popen("git pull origin", "rb" )) == NULL )
+	if( (pPipe = popen("git pull origin", "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -52,7 +52,7 @@ int git_add(){
 	if( (pPipe = _popen("git add .", "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-	if( (pPipe = popen("git add .", "rb" )) == NULL )
+	if( (pPipe = popen("git add .", "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -88,7 +88,7 @@ int git_commit(){
 	if( (pPipe = _popen("git commit -m \"auto update service\"", "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-	if( (pPipe = popen("git commit -m \"auto update service\"", "rb" )) == NULL )
+	if( (pPipe = popen("git commit -m \"auto update service\"", "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -124,7 +124,7 @@ int git_push(){
 	if( (pPipe = _popen("git push origin", "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-	if( (pPipe = popen("git push origin", "rb" )) == NULL )
+	if( (pPipe = popen("git push origin", "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -315,7 +315,7 @@ int main(int argc, char** argv) {
    const string url13 = "https://www.dailymotion.com/embed/video/k1FijVynGNsZ2ZrAGJ0"; //tv9
    const string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
    const string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
-   const string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
+   const string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ/live"; //vaticanmedia
    printf("Starting update URL proccess...");
    update_url(url1,160);
    update_url(url2,112);
