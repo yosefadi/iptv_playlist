@@ -171,11 +171,12 @@ int update_url(string neturl, int linenum) {
 
    	string cmdnet = "youtube-dl -f 94 -g ";
 	cmdnet += neturl;
-#ifdef WIN32
-   if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
+#ifdef _WIN32
+    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-   if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
+    printf("Starting youtube-dl...");
+   if( (pPipe = popen(cmdnet.c_str(), "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -244,11 +245,12 @@ int update_dm(string dmurl, int linenum) {
 
    	string cmdnet = "youtube-dl -f hls-480-0 -g ";
 	cmdnet += dmurl;
-#ifdef WIN32
+#ifdef _WIN32
    if( (pPipe = _popen(cmdnet.c_str(), "rb" )) == NULL )
       return( 1 );
 #elif __linux__
-   if( (pPipe = popen(cmdnet.c_str(), "rb" )) == NULL )
+    printf("Starting youtube-dl...");
+   if( (pPipe = popen(cmdnet.c_str(), "r" )) == NULL )
       return( 1 );
 #endif
 
@@ -314,6 +316,7 @@ int main(int argc, char** argv) {
    const string url14 = "https://www.youtube.com/channel/UCWw_gejTX29Yn89LLpcINZQ/live"; //kbs world
    const string url15 = "https://www.youtube.com/channel/UCf1y3FvYJYPbgMqHX7ZzeZA/live"; //sbn us
    const string url16 = "https://www.youtube.com/channel/UC7E-LYc1wivk33iyt5bR5zQ"; //vaticanmedia
+   printf("Starting update URL proccess...");
    update_url(url1,160);
    update_url(url2,112);
    update_url(url3,109);
@@ -333,5 +336,6 @@ int main(int argc, char** argv) {
    git_add();
    git_commit();
    git_push();
+   printf("Update URL proccess complete!");
    return 0;
 }
