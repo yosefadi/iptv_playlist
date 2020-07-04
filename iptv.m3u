@@ -226,10 +226,10 @@ https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1593728002/ei/
 https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1593728008/ei/qAf-XsXZEKmKssUPxYWSgAg/ip/36.79.75.157/id/pUVi00RF-Qo.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/goi/160/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/r2---sn-2uuxa3vh-ngbz.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/3110/mh/9d/mm/44/mn/sn-2uuxa3vh-ngbz/ms/lva/mv/m/mvi/1/pl/19/dover/11/keepalive/yes/mt/1593706336/disable_polymer/true/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,goi,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIhAP1eGwKQQP8L2zH4AuKbvsDsqk9KS_UODWXTtajmBfn2AiAe68aGJiiKpg6EfoohnYx2HSgHx5uLslMiOFr5YjHPoQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIhAIhNBvWTMYGyCfo1GH3STL92TafaXK4gfBswYBGQSXNdAiAeiwJB8-UqmqQvOB_xp3Rt_TI1GNwcwFLscM_QiPE5Jw%3D%3D/playlist/index.m3u8|Referer=https://www.youtube.com/channel/UC4K_LI-Tn3-LshNgG0-YypQ/live
 
 #EXTINF:-1 tvg-group="MY/SG" tvg-logo="https://freeview.github.io/iptv/logos/ntv7.png" group-title="MY/SG",NTV7
-https://stream-05.sg1.dailymotion.com/sec(_9ERdFwnAbs1GZsc1AwhHWTSh-gCsfJtldUfkvAyhsU)/dm/3/x6qp6ou/s/live-2.m3u8|Referer=https://www.dailymotion.com/embed/video/kxm1wihUkjNiINrAqlg
+https://stream-03.sg1.dailymotion.com/sec(_9ERdFwnAbs1GZsc1AwhHWTSh-gCsfJtldUfkvAyhsU)/dm/3/x6qp6ou/s/live-2.m3u8|Referer=https://www.dailymotion.com/embed/video/kxm1wihUkjNiINrAqlg
 
 #EXTINF:-1 tvg-group="MY/SG" tvg-logo="https://freeview.github.io/iptv/logos/8tv.png" group-title="MY/SG",8TV
-https://stream-01.sg1.dailymotion.com/sec(_9ERdFwnAbs1GZsc1AwhHVJsYyn8W2RmVlhZlAga8rU)/dm/3/x6qud17/s/live-2.m3u8|Referer=https://www.dailymotion.com/embed/video/kdFzSYy1bHxrForBrar
+https://stream-05.sg1.dailymotion.com/sec(_9ERdFwnAbs1GZsc1AwhHVJsYyn8W2RmVlhZlAga8rU)/dm/3/x6qud17/s/live-2.m3u8|Referer=https://www.dailymotion.com/embed/video/kdFzSYy1bHxrForBrar
 
 #EXTINF:-1 tvg-group="MY/SG" tvg-logo="https://freeview.github.io/iptv/logos/tv9.png" group-title="MY/SG",TV9
 https://stream-01.sg1.dailymotion.com/sec(_9ERdFwnAbs1GZsc1AwhHZPhbjUe9ll1j5KX-PBq7UY)/dm/3/x6qqja6/s/live-2.m3u8|Referer=https://www.dailymotion.com/embed/video/k1FijVynGNsZ2ZrAGJ0
